@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> getList() {
         User user=new User();
-        user.setBranchId(14);
+        user.setId(1);
         return userMapper.select(user);
     }
 }
