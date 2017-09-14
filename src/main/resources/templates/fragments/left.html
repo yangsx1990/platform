@@ -1,0 +1,154 @@
+<div th:fragment="left">
+	<div class="sidebar" id="sidebar">
+		<script type="text/javascript">
+			try {
+				ace.settings.check('sidebar', 'fixed')
+			} catch (e) {
+			}
+		</script>
+		<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+			<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+				<span class="btn btn-success"></span> <span class="btn btn-info"></span>
+				<span class="btn btn-warning"></span> <span class="btn btn-danger"></span>
+			</div>
+		</div>
+		<!-- #sidebar-shortcuts -->
+		<ul class="nav nav-list">
+			<li><a href="javascript:void(0);"> <i class="icon-dashboard"></i>
+					<span class="menu-text"> 控制台 </span>
+			</a></li>
+			<!-- 商品商品管理 -->
+			<li><a href="#" class="dropdown-toggle"> <i class="icon-desktop"></i>
+					<span class="menu-text">商城商品管理 </span> <b
+					class="arrow icon-angle-down"></b>
+			</a>
+				<ul class="submenu">
+					<li><a th:href="@{/goods_info/list}"> <i
+							class="icon-double-angle-right"></i> 商城商品列表
+					</a></li>
+
+					<li><a th:href="@{/goods_serial/list}"> <i
+							class="icon-double-angle-right"></i> 商品系列
+					</a></li>
+					<li><a th:href="@{/good_label/list}"> <i
+							class="icon-double-angle-right"></i> 商品属性
+					</a></li>
+					<li><a th:href="@{/goods_relation/list}"> <i
+							class="icon-double-angle-right"></i> 商品关联
+					</a></li>
+					<li><a th:href="@{/accessory/list}"> <i
+							class="icon-double-angle-right"></i> 商品配件
+					</a></li>
+
+				</ul></li>
+			<!-- 商品商品管理 -->
+
+			<!-- 商城商品推荐管理 -->
+			<li><a href="#" class="dropdown-toggle"
+				shiro:hasAnyRoles="admin,operation"> <i class="icon-edit"></i> <span
+					class="menu-text">商城商品推荐管理</span> <b class="arrow icon-angle-down"></b>
+			</a>
+				<ul class="submenu">
+					<li><a th:href="@{/rd_index/list}"> <i
+							class="icon-double-angle-right"></i> 首页商品推荐列表
+					</a></li>
+
+					<li><a th:href="@{/rd_search/list}"> <i
+							class="icon-double-angle-right"></i> 搜索页商品推荐列表
+					</a></li>
+					<li><a th:href="@{/rd_detail/list}"> <i
+							class="icon-double-angle-right"></i> 商品详情页推荐列表
+					</a></li>
+					<li><a th:href="@{/rd_gifts/list}"> <i
+							class="icon-double-angle-right"></i> 礼物列表管理
+					</a></li>
+					<li><a th:href="@{/rd_goods/list}"> <i
+							class="icon-double-angle-right"></i> 产品列表管理
+					</a></li>
+					<li><a th:href="@{/rd_custom/list}"> <i
+							class="icon-double-angle-right"></i> 定制列表管理
+					</a></li>
+				</ul></li>
+			<!-- 商城商品推荐管理 -->
+
+			<!-- 商城运营管理 -->
+			<li><a href="#" class="dropdown-toggle"
+				shiro:hasAnyRoles="admin,operation"> <i class="icon-calendar"></i>
+					<span class="menu-text">商城运营管理</span> <b
+					class="arrow icon-angle-down"></b>
+			</a>
+				<ul class="submenu">
+					<li><a th:href="@{/slideShow_topic/list?type=2}"> <i
+							class="icon-double-angle-right"></i> 商城轮播图管理
+					</a></li>
+
+					<li><a th:href="@{/mallProject_topic/list?type=3}"> <i
+							class="icon-double-angle-right"></i> 商城专题管理
+					</a></li>
+					<li><a th:href="@{/recommend_topic/list?type=4}"> <i
+							class="icon-double-angle-right"></i> 专题推荐商品管理
+					</a></li>
+					<li><a th:href="@{/parent_topic/list?type=1}"> <i
+							class="icon-double-angle-right"></i> 亲子商品专栏管理
+					</a></li>
+					<!-- <li><a th:href="@{/goods_msg/list}"> <i
+							class="icon-double-angle-right"></i> 商品评论管理
+					</a></li> -->
+				</ul></li>
+			<!-- 商城运营管理 -->
+
+			<!-- 商城订单管理  -->
+			<li><a href="#" class="dropdown-toggle"
+				shiro:hasAnyRoles="admin,operation,services,designer,production">
+					<i class="icon-tag"></i> <span class="menu-text">商城订单管理 </span> <b
+					class="arrow icon-angle-down"></b>
+			</a>
+				<ul class="submenu">
+					<li><a th:href="@{/goods_order/list}"> <i
+							class="icon-double-angle-right"></i> 订单列表
+					</a></li>
+
+					<li><a th:href="@{/goods_order_after/afterlist}"> <i
+							class="icon-double-angle-right"></i> 售后列表
+					</a></li>
+				</ul></li>
+			<!-- 商城订单管理  -->
+			<!-- 原运营管理-->
+			<li><a href="#" class="dropdown-toggle"
+				shiro:hasAnyRoles="admin,operation"> <i class="icon-list-alt"></i>
+					<span class="menu-text">运营管理 </span> <b
+					class="arrow icon-angle-down"></b>
+			</a>
+				<ul class="submenu">
+					<li><a th:href="@{/article/list}"> <i
+							class="icon-double-angle-right"></i> 内容管理
+					</a></li>
+
+					<li><a th:href="@{/message/list}"> <i
+							class="icon-double-angle-right"></i> 文章评论管理
+					</a></li>
+					<li><a th:href="@{/subject/list}"> <i
+							class="icon-double-angle-right"></i> 专题管理
+					</a></li>
+				</ul></li>
+			<!-- 原运营管理-->
+			<li shiro:hasAnyRoles="admin,operation"><a id="users"
+				th:href="@{/user/list}"> <i class="icon-text-width"></i> <span
+					class="menu-text"> 会员管理 </span>
+			</a></li>
+
+			<li shiro:hasAnyRoles="admin,operation,services,designer,production">
+				<a id="orders" th:href="@{/order/list}"> <i class="icon-desktop"></i>
+					<span class="menu-text"> 定制管理 </span>
+			</a>
+			</li>
+			<li><a href="https://tongji.baidu.com/web/welcome/login"
+				target="_blank"> <i class="icon-edit"></i> <span
+					class="menu-text"> 百度统计</span>
+			</a></li>
+		</ul>
+		<script>
+			
+		</script>
+	</div>
+</div>

@@ -32,12 +32,12 @@ public class UserController {
 
     @RequestMapping("")
     public String login(){
-        return "login";
+        return "user/login";
     }
 
     @RequestMapping("/mainUrl")
     public String main(){
-        return "main";
+        return "index";
     }
 
     @RequestMapping(value = "/left", method = RequestMethod.GET)
